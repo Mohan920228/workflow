@@ -1,0 +1,16 @@
+name: workflow-filter
+
+on:
+  push:
+    branches:
+      - 'master'
+    branches-ignore:
+      - 'feat/branch*/**'
+      - 'feat/**'
+
+jobs:
+  gitworkflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo workflow info
+        run: echo "Workflow event is ${{ github.event_name }}"
