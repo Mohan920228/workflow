@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - 'master'
-    branches-ignore:
-      - 'feat/branch*/**'
-      - 'feat/**'
-
+    
+  pull_request:
+    branches: 
+        - feat/branch*/**
 jobs:
   gitworkflow:
     runs-on: ubuntu-latest
